@@ -25,6 +25,7 @@ import Stack from '@mui/material/Stack'
 
 
 export default function Page({ params }) {
+ 
   const employees = {
     registration: 'smh2546',
     dob: "20/06/1999",
@@ -33,7 +34,7 @@ export default function Page({ params }) {
 
 
     name: "sandeep",
-    email: "abc@gmail.com",
+    email: "abcd@gmail.com",
     number: "1234567890",
     gender: "male",
     createdAt: "today",
@@ -50,9 +51,8 @@ export default function Page({ params }) {
     city: "Bhopal",
     country: "india",
     pincode: "462003",
-    state: 'Madhya Pradesh'
-  }
-
+    state: 'Madhya Pradesh'
+  }
   function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
 

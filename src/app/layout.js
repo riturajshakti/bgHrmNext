@@ -30,7 +30,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import{Search,SearchIconWrapper, SearchIcon, StyledInputBase} from '@mui/material'
+
 
 
 import { useRouter } from 'next/navigation'
@@ -108,7 +108,8 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 const sideBarMenu = [
   "Dashboard",
   "Employees",
-  "Calender"
+  "Calender",
+  
 ]
 
 
@@ -140,7 +141,7 @@ export default function RootLayout({ children }) {
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Bootstrap demo</title>
+    <title>BeanGate HRM</title>
     <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet"
