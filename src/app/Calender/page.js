@@ -98,11 +98,12 @@ export default function DateCalendarServerRequest() {
   };
 
   return (
-       
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DateCalendar
-      sx={{border:'solid red 2px', width:500}}
-      
+        sx={{
+          border:'solid red 2px',
+          width:'400px'
+        }}
         defaultValue={initialValue}
         loading={isLoading}
         onMonthChange={handleMonthChange}
@@ -117,6 +118,5 @@ export default function DateCalendarServerRequest() {
         }}
       />
     </LocalizationProvider>
-    
   );
 }

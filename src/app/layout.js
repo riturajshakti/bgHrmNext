@@ -106,10 +106,18 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 
 const sideBarMenu = [
-  "Dashboard",
-  "Employees",
-  "Calender",
-  
+  {
+    label: 'Dashboard',
+    link: '/Dashboard',
+  },
+  {
+    label: 'Employees',
+    link: '/Employees',
+  },
+  {
+    label: 'Calender',
+    link: '/Calender',
+  }
 ]
 
 
@@ -186,10 +194,10 @@ export default function RootLayout({ children }) {
         <Divider />
         <List>
           {/* {['Inbox', 'Starred', 'Send email', 'Drafts'] */}
-          {sideBarMenu.map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+          {sideBarMenu.map((menuItem, index) => (
+            <ListItem key={menuItem.link} disablePadding sx={{ display: 'block' }}>
               
-              <ListItemButton href={text}
+              <ListItemButton href={menuItem.link}
                 sx={{
                   minHeight: 48,
                   justifyContent: open ? 'initial' : 'center',
@@ -205,7 +213,7 @@ export default function RootLayout({ children }) {
                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                 </ListItemIcon>
               
-                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+                <ListItemText primary={menuItem.label} sx={{ opacity: open ? 1 : 0 }} />
                  
               </ListItemButton>
             </ListItem>
